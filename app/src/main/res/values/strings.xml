@@ -3,7 +3,11 @@
     <string name="app_name">Political Preparedness</string>
 
     <!-- TODO: Add necessary string values -->
-    <string name="permission_required">Permissão required</string>
+    <string name="permission_required">permission required</string>
     <string name="settings">settings</string>
+    <string name="follow">follow</string>
+    <string name="unfollow">unfollow</string>
+    <string name="election_saved">election saved</string>
+    <string name="election_deleted">election_deleted</string>
 
 </resources>

@@ -45,6 +45,12 @@ class ElectionsFragment : Fragment() {
         setupRecyclerView()
     }
 
+    override fun onResume() {
+        super.onResume()
+        rvAdapterSaved.notifyDataSetChanged()
+        viewModel.getUpcomingElections()
+    }
+
     private fun observables() {
         //TODO: Populate recycler adapters
         viewModel.upcomingElections.observe(viewLifecycleOwner, { elections ->
@@ -55,12 +61,7 @@ class ElectionsFragment : Fragment() {
 
         viewModel.savedElections.observe(viewLifecycleOwner, { elections ->
             elections?.let {
-                if (it.isEmpty()) {
-//                    setSavedListVisibility(View.INVISIBLE)
-                } else {
-//                    setSavedListVisibility(View.VISIBLE)
-                    rvAdapterSaved.submitList(it)
-                }
+                rvAdapterSaved.submitList(it)
             }
         })
 
