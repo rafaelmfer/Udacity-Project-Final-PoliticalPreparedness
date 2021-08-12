@@ -9,5 +9,19 @@
     <string name="unfollow">unfollow</string>
     <string name="election_saved">election saved</string>
     <string name="election_deleted">election_deleted</string>
+    <string name="saved_elections">Saved Elections</string>
+    <string name="upcoming_elections">upcoming elections</string>
+    <string name="find_my_representatives">find my representatives</string>
+    <string name="representative_search">Representative Search</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="city">City</string>
+    <string name="zip">Zip</string>
+    <string name="use_my_location">use my location</string>
+    <string name="my_representatives">My Representatives</string>
+    <string name="election_information">Election Information</string>
+    <string name="voting_locations">Voting Locations</string>
+    <string name="ballot_information">Ballot Information</string>
+    <string name="address_information">Address Information</string>
 
 </resources>

@@ -54,7 +54,7 @@
             android:layout_marginStart="@dimen/default_margin_screen"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="@dimen/default_margin_screen"
-            android:text="Saved Elections"
+            android:text="@string/saved_elections"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
