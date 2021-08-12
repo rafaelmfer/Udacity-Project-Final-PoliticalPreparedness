@@ -4,6 +4,12 @@
     xmlns:motion="http://schemas.android.com/tools">
 
     <!-- TODO: Add data binding node -->
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.politicalpreparedness.representative.RepresentativeViewModel" />
+    </data>
 
     <!-- TODO: Add motion scene to hide form on vertical scroll. -->
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -31,6 +37,7 @@
             android:autofillHints="postalAddress"
             android:hint="Address Line 1"
             android:inputType="textPostalAddress"
+            android:text="@{viewModel.address.line1}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_title" />
 
@@ -43,6 +50,7 @@
             android:autofillHints="postalAddress"
             android:hint="Address Line 2"
             android:inputType="textPostalAddress"
+            android:text="@{viewModel.address.line2}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/address_line_1" />
@@ -56,6 +64,7 @@
             android:autofillHints="postalAddress"
             android:hint="City"
             android:inputType="textPostalAddress"
+            android:text="@{viewModel.address.city}"
             app:layout_constraintEnd_toStartOf="@id/state"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/address_line_2" />
@@ -65,6 +74,7 @@
         <!-- TODO: Add visual styling and content -->
         <Spinner
             android:id="@+id/state"
+            stateValue="@{viewModel.address.state}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:autofillHints="postalAddress"
@@ -84,6 +94,7 @@
             android:hint="Zip"
             android:inputType="number"
             android:maxLength="5"
+            android:text="@{viewModel.address.zip}"
             app:layout_constraintEnd_toEndOf="@id/city"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/city" />
@@ -119,14 +130,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="My Representatives"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_location"
-            motion:text="My Representatives" />
+            app:layout_constraintTop_toBottomOf="@id/button_location" />
 
         <!-- TODO: Add Representatives RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/my_representative_recycler"
+            android:id="@+id/rv_my_representatives"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="4dp"
