@@ -3,6 +3,7 @@ package com.udacity.politicalpreparedness.network
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import com.udacity.politicalpreparedness.network.jsonadapter.DateAdapter
 import com.udacity.politicalpreparedness.network.jsonadapter.ElectionAdapter
 import com.udacity.politicalpreparedness.network.models.ElectionResponse
 import com.udacity.politicalpreparedness.network.models.RepresentativeResponse
@@ -16,6 +17,7 @@ private const val BASE_URL = "https://www.googleapis.com/civicinfo/v2/"
 
 // TODO: Add adapters for Java Date and custom adapter ElectionAdapter (included in project)
 private val moshi = Moshi.Builder()
+    .add(DateAdapter())
     .add(ElectionAdapter())
     .add(KotlinJsonAdapterFactory())
     .build()

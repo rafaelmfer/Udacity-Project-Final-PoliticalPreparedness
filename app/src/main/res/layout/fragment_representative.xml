@@ -38,6 +38,7 @@
             android:hint="Address Line 1"
             android:inputType="textPostalAddress"
             android:text="@{viewModel.address.line1}"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_title" />
 
@@ -46,7 +47,7 @@
         <EditText
             android:id="@+id/address_line_2"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:autofillHints="postalAddress"
             android:hint="Address Line 2"
             android:inputType="textPostalAddress"
@@ -138,7 +139,7 @@
         <!-- TODO: Add Representatives RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_my_representatives"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
@@ -146,6 +147,9 @@
             android:clipToPadding="false"
             android:paddingTop="4dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/representative_title"
             motion:listitem="@layout/item_representative" />
 

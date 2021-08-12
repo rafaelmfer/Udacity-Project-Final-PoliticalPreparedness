@@ -1,10 +1,11 @@
 package com.udacity.politicalpreparedness.network.jsonadapter
 
-import com.udacity.politicalpreparedness.network.models.Division
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
+import com.udacity.politicalpreparedness.network.models.Division
 
 class ElectionAdapter {
+
     @FromJson
     fun divisionFromJson (ocdDivisionId: String): Division {
         val countryDelimiter = "country:"

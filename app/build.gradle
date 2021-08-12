@@ -69,11 +69,11 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
     implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
-
-    // Moshi
-    implementation "com.squareup.moshi:moshi:1.9.3"
-    implementation "com.squareup.moshi:moshi-kotlin:1.9.3"
-    implementation "com.squareup.moshi:moshi-adapters:1.9.3"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+// Moshi
+    implementation "com.squareup.moshi:moshi:1.12.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+    implementation "com.squareup.moshi:moshi-adapters:1.12.0"
 
     // Glide
     //TODO: Add Glide Implementation
